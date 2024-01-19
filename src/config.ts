@@ -31,6 +31,17 @@ export const configSchema = z.object({
    * @example ".docs-builder-container"
    * @default ""
    */
+  titleExclusions: z.array(z.string()).optional(),
+  /**
+   * An array of page titles to exclude from the crawl.
+   * If a page's title matches any of the titles in this list, 
+   * that page will be skipped during the crawl process.
+   * This is useful for avoiding crawling of error pages 
+   * or any other specific pages identified by their titles.
+   * 
+   * @example ["Page Not Found - Department of Languages and Literature - The University of Utah"]
+   * @default []
+  */
   selector: z.string().optional(),
   /**
    * Don't crawl more than this many pages

@@ -58,6 +58,13 @@ export async function crawl(config: Config) {
       // Use the requestHandler to process each of the crawled pages.
       async requestHandler({ request, page, enqueueLinks, log, pushData }) {
         const title = await page.title();
+
+        // Skip pages with titles in the titleExclusions list
+        if (config.titleExclusions && config.titleExclusions.includes(title)) {
+          log.info(`Skipping page with excluded title: ${title}`);
+          return;
+        }
+
         pageCounter++;
         log.info(
           `Crawling: Page ${pageCounter} / ${config.maxPagesToCrawl} - URL: ${request.loadedUrl}...`,
