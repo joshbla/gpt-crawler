@@ -1,9 +1,9 @@
 import { Config } from "./src/config";
 
 export const defaultConfig: Config = {
-  url: "https://us.utah.edu/contact/directory.php",
-  match: "https://us.utah.edu/**",
-  titleExclusions: ["Page Not Found - Office of Undergraduate Studies - The University of Utah"],
+  url: "https://languages.utah.edu",
+  match: "https://languages.utah.edu/**",
+  titleExclusions: ["Page Not Found - Department of Languages and Literature - The University of Utah"],
   selector: "main.uu-main#skip-link-target",
   maxPagesToCrawl: 500,
   outputFileName: "output.json",
