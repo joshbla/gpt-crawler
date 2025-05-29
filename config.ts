@@ -1,8 +1,8 @@
 import { Config } from "./src/config";
 
 export const defaultConfig: Config = {
-  url: "https://us.utah.edu/contact/directory.php",
-  match: "https://us.utah.edu/**",
+  url: "https://preview-universityofutah.catalog.staging.coursedog.com/programs/JAPNBA",
+  match: "https://preview-universityofutah.catalog.staging.coursedog.com/programs/JAPNBA",
   titleExclusions: ["Page Not Found - Office of Undergraduate Studies - The University of Utah"],
   selector: "main.uu-main#skip-link-target",
   maxPagesToCrawl: 500,
